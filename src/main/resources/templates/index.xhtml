@@ -1,0 +1,34 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+<h:title>Principal</h:title>
+</h:head>
+
+<h:body>
+	
+	<p:commandButton id="dynaButton" value="Menu" type="button"
+		icon="pi pi-home" />
+	<p:menu overlay="true" trigger="dynaButton" my="left top"
+		at="left bottom">
+		<p:submenu label="Usuários">
+			<p:menuitem value="Listar" url="/usuarios" />
+			<p:menuitem value="Cadastrar" url="/cadastrar" />
+		</p:submenu>
+	</p:menu>
+	
+	<p:panel id="basic" header="Notas do autor" footer="Marcelo Martins" style="margin-bottom:20px">
+        <h:panelGrid columns="2" cellpadding="10">
+            <p:graphicImage name="demo/images/godfather/godfather1.jpg" />
+            <h:outputText
+                value="Nossa corrida diária é em busca da automação. 
+                Ou seja,passamos dias das nossas vidas em busca de criar rotinas e processos 
+                para que outros tenham mais tempo livre de vida. Então afinal, quem automatiza 
+                nossos processos?" />
+        </h:panelGrid>
+    </p:panel>
+	
+</h:body>
+</html>
